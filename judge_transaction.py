@@ -4,8 +4,8 @@ def judge_transaction(transaction_type, own_capital, own_employees, partner_capi
     """
     result = "中小受託取引に非該当"  # デフォルトを非該当にする
 
-    type1_transactions = ["製造委託", "修理委託", "特定運送委託", "情報成果物作成委託（プログラムの作成）"]
-    type2_transactions = ["情報成果物作成委託（プログラムの作成以外）", "役務提供委託"]
+    type1_transactions = ["製造委託", "修理委託", "特定運送委託", "情報成果物作成委託（プログラムの作成）", "役務提供委託（運送，物品の倉庫における保管、情報処理）"]
+    type2_transactions = ["情報成果物作成委託（プログラムの作成以外）", "役務提供委託（運送，物品の倉庫における保管、情報処理以外）"]
 
     if transaction_type in type1_transactions:
         if own_capital > 300_000_000:
